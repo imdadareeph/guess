@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imdads Guess</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="app.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="app.css" rel="stylesheet">
+	<link href="style2.css" rel="stylesheet">
+	<link href="menu.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+	
+</head>
+<body ng-app="GuessApp" ng-controller="GameController" class="bgfull">
+<!--TOP-NAVBAR-END-->    
+<nav class="top-bar">
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-4 hidden-xs">
+            <span class="nav-text">
+                <i class="fa fa-envelope" aria-hidden="true"></i> imdadareeph@gmail.com
+            </span>
+        </div>
+        <div class="col-sm-4 text-center">
+           <a href="https://www.facebook.com/imdadareeph" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/imdadareeph" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://github.com/imdadareeph" class="social"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/985640/imdad-areeph" class="social"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+            <a href="#" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+        </div>
+    	<div class="col-sm-4 text-right hidden-xs">
+            <ul class="tools">                    
+            
+                
+            <li class="dropdown">
+             <a class="" href="#"><i class="fa fa-user" aria-hidden="true"></i> Imdad Areeph</a>                  
+            </li>
+                             
+            </ul>
+        </div>
+    </div>
+  </div>
+</nav>
+<!--====================== NAVBAR MENU START===================-->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      	<ul class="nav navbar-nav navbar-left">
+	        <li class=""><a href="index.html">Home</a></li>
+	        
+	        <li><a href="index1.html">App 2</a></li>
+	        <li><a href="index2.html">App 3</a></li>
+	        <li><a href="index3.html">App 4</a></li>
+      	</ul>
+    </div>
+  </div>
+</nav>
+<!--NAVBAR-END--> 
+	<div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+           <div class="padd-btm">
+	        <div class="circlePercent circleright">
+			  <div class="counter" data-percent={{guesses}}></div>
+			  <div class="progress"></div>
+			  <div class="progressEnd"></div>
+			</div>
+	    </div>
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" class="form-control" name="guess" ng-model="input.letter" ng-minlength="1" ng-maxlength="1" ng-pattern="/^[A-Za-z]+$/">
+                
+                <div id="remember" class="checkbox">
+                    <label>
+                        <div class="text-center h1">{{displayWord}}</div>
+                    </label>
+                </div>
+                <button ng-click="letterChosen()" onclick="clickme()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Guess</button>
+                <div class="breadcrumb btn-block col-md-3 fa fa-thumbs-up thumbsup-style">
+			    	<span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
+			    </div>
+
+			    <div class="breadcrumb btn-block col-md-3 fa fa-thumbs-down thumbsdown-style">
+			    	<span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+			    </div>
+            </form><!-- /form -->
+            <a href="index2.html" class="forgot-password">
+                try another design
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+	<script src="appprogressbar.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
