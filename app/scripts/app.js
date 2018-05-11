@@ -36,6 +36,8 @@
 
   var app = angular.module('guess', [
     
+    
+    'ngRoute'
   ])
   .config(function ($routeProvider) {
     $routeProvider
