@@ -36,11 +36,6 @@
 
   var app = angular.module('guess', [
     
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
