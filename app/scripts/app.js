@@ -35,7 +35,7 @@
   }); */
 
   var app = angular.module('guess', [
-    'ngAnimate',
+    
     'ngCookies',
     'ngResource',
     'ngRoute',

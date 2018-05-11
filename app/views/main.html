@@ -12,7 +12,7 @@
 
         <div class="text-center h1 pt-5">{{displayWord}}</div>
       <div>
-        <input type="text" placeholder="Enter Single Alphabet" class="form-control input-lg" name="guess" ng-model="input.letter" ng-minlength="1" ng-maxlength="1" ng-pattern="^\w{1}$">
+        <input type="text" placeholder="Enter Single Alphabet" class="form-control input-lg" name="guess" ng-model="input.letter" ng-minlength="1" ng-maxlength="1" ng-pattern="/^\w{1}$/">
 
         <div class="col-form-label col-form-label-lg">
         <button ng-click="letterChosen()" onclick="clickme()" class="btn btn-block btn-info">
