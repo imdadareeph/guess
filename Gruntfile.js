@@ -429,7 +429,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:imdadareeph/guess.git',
+          remote: 'https://github.com/imdadareeph/guess.git',
           branch: 'gh-pages'
         }
       },
