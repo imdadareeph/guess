@@ -1,0 +1,35 @@
+<div>
+        <div class="col-md-12 text-center title-name"><h1>Guess the name</h1></div>
+    </div>
+    <div class="padd-btm col-md-12">
+          <div class="circlePercent circleright">
+        <div class="counter" data-percent={{guesses}}></div>
+        <div class="progress"></div>
+        <div class="progressEnd"></div>
+      </div>
+      </div>
+      <div class="col-md-12">
+
+        <div class="text-center h1 pt-5">{{displayWord}}</div>
+      <div>
+        <input type="text" placeholder="Enter Single Alphabet" class="form-control input-lg" name="guess" ng-model="input.letter" ng-minlength="1" ng-maxlength="1" ng-pattern="^\w{1}$">
+
+        <div class="col-form-label col-form-label-lg">
+        <button ng-click="letterChosen()" onclick="clickme()" class="btn btn-block btn-info">
+        SUBMIT
+        </button>
+        </div>
+      </div>
+      </div>
+    <div class="col-md-12">
+        <div class="breadcrumb btn-block fa fa-thumbs-up thumbsup-style">
+          <span ng-repeat="letter in correctLettersChosen">{{letter}}</span>
+        </div>
+
+        <div class="breadcrumb btn-block fa fa-thumbs-down thumbsdown-style">
+          <span ng-repeat="letter in incorrectLettersChosen">{{letter}}</span>
+        </div>
+    </div>
+
+  </div>
+  <br><br><br><br><br><br>
